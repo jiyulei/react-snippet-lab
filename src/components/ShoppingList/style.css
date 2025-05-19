@@ -1,48 +1,51 @@
 .foodLabel--checked {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .shoppingList {
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 300px;
-    min-height: 400px;
-    padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  min-height: 400px;
+  padding: 10px;
 }
 
 .dropDownList {
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid gray;
-
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid gray;
 }
 
 input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .listItem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
 }
 
 .checkItem {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .xButton {
-    flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+.highlighted {
+  background-color: lightblue;
 }
