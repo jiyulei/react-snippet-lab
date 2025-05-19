@@ -1,13 +1,33 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./style.css";
+import { debounce } from "./debounceUtil";
 
 export const ShoppingList = () => {
   const [inputValue, setInputValue] = useState("");
   const [foodList, setFoodList] = useState([]);
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async (input) => {
+  const fetchData = async (input) => {
+    if (input.length < 2) {
+      setFoodList([]);
+      return;
+    }
+
+    const response = await fetch(
+      `https://api.frontendeval.com/fake/food/${input}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const dataList = await response.json();
+    setFoodList(dataList);
+  };
+
+  const deBouncedFetch = useCallback(
+    debounce(async (input) => {
       if (input.length < 2) {
         setFoodList([]);
         return;
@@ -24,10 +44,13 @@ export const ShoppingList = () => {
       );
       const dataList = await response.json();
       setFoodList(dataList);
-    };
+    }, 500),
+    []
+  );
 
-    fetchData(inputValue);
-  }, [inputValue]);
+  useEffect(() => {
+    deBouncedFetch(inputValue);
+  }, [inputValue, deBouncedFetch]);
 
   const handleClick = (food) => {
     setCart((prev) => [...prev, { name: food, checked: false }]);
@@ -88,7 +111,11 @@ function CartList({ cart, onDelete, onCheck }) {
           {item.name}
         </label>
       </div>
-      <button className="xButton" onClick={() => onDelete(index)} disabled={item.checked}>
+      <button
+        className="xButton"
+        onClick={() => onDelete(index)}
+        disabled={item.checked}
+      >
         X
       </button>
     </div>
