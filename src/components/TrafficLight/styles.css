@@ -1,0 +1,42 @@
+.trafficLight {
+  width: 100px;
+  height: 300px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.redLight {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.redLightOn {
+  background-color: red;
+}
+
+.yellowLight {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.yellowLightOn {
+  background-color: yellow;
+}
+
+.greenLight {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.greenLightOn {
+  background-color: green;
+}
