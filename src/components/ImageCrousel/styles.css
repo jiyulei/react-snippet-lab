@@ -1,0 +1,85 @@
+.imgContainer {
+  width: 400px;
+  height: 400px;
+}
+
+.carosel {
+  position: relative;
+  height: 400px;
+  width: min(600px, 100vw);
+  background-color: black;
+}
+
+.caroselImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navButtonLeft {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  border-radius: 100%;
+  background-color: transparent;
+  color: gray;
+  border: 1px solid gray;
+}
+
+.navButtonLeft:hover {
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+.navButtonRight {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  border-radius: 100%;
+  background-color: transparent;
+  color: gray;
+  border: 1px solid gray;
+}
+
+.navButtonRight:hover {
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  border: 1px solid gray;
+}
+
+.dot--selected {
+  background-color: white;
+}
+
+.dots {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.image_carousel {
+  background-color: black;
+  position: relative;
+  height: 400px;
+  width: min(600px, 100vw);
+}
+
+.image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

@@ -1,6 +1,7 @@
 import { ShoppingList } from "./components/ShoppingList/ShoppingList";
 import { ContactForm } from "./components/ContactForm.jsx/ContactForm";
 import { TrafficLight } from "./components/TrafficLight/TrafficLight";
+import { CrouselContainer } from "./components/ImageCrousel/CrouselContainer";
 import "./index.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <ShoppingList />
       <ContactForm />
       <TrafficLight />
+      <CrouselContainer />
     </div>
   );
 }
