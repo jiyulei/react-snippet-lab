@@ -1,0 +1,20 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  background-color: lightcyan;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+    font-size: 80px;
+}
