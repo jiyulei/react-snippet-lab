@@ -4,6 +4,7 @@ import { TrafficLight } from "./components/TrafficLight/TrafficLight";
 import { CrouselContainer } from "./components/ImageCrousel/CrouselContainer";
 import { TicTacToe } from "./components/TicTacToe/TicTacToe";
 import { TicTacToe2 } from "./components/TicTacToell/TicTacToe2";
+import { TransferList } from "./components/TransferList/TransferList";
 import "./index.css";
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
       <ContactForm />
       <TrafficLight />
       <CrouselContainer /> */}
-      <TicTacToe />
-      <TicTacToe2 size={4}/>
+      {/* <TicTacToe /> */}
+      {/* <TicTacToe2 size={4}/> */}
+      <TransferList />
     </div>
   );
 }

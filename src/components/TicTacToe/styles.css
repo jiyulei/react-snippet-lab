@@ -1,4 +1,4 @@
-.board {
+/* .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 300px;
@@ -17,4 +17,4 @@
 
 .player {
     font-size: 80px;
-}
+} */
