@@ -1,0 +1,19 @@
+.container {
+  width: 200px;
+  height: 200px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.item {
+  display: flex;
+  align-self: center;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+}
