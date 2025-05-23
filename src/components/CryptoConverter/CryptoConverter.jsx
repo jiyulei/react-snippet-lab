@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { debounceFn } from "./debounceUtil";
 
 export const CryptoConverter = () => {
   const [input, setInput] = useState("");
@@ -12,8 +13,10 @@ export const CryptoConverter = () => {
   const arrow = diff > 0 ? "\u2191" : "\u2193";
 
   useEffect(() => {
+    //每次重新渲染的时候，重置ref,因为我们希望比对的是同一货币
     prevWuc.current = 0;
     setDiff(null);
+
     const fetchData = async (newCurrency) => {
       const response = await fetch(
         `https://api.frontendeval.com/fake/crypto/${newCurrency}`,
@@ -34,8 +37,10 @@ export const CryptoConverter = () => {
       prevWuc.current = data.value;
       setWuc(data.value);
     };
+    // useDebounceFn 来防抖
+    const debouncedFetch = debounceFn(fetchData, 3000);
+    debouncedFetch(currency);
 
-    fetchData(currency);
     const timeId = setInterval(() => {
       fetchData(currency);
     }, 3000);
@@ -60,7 +65,10 @@ export const CryptoConverter = () => {
         </select>
       </div>
       <div>
-        {result.toFixed(2)} WUC{" "}
+        {/* toFixed返回的是字符串，需要用Number来转换 */}
+        {/* toLocaleString 来格式化数字 */}
+        {Number(result.toFixed(2)).toLocaleString()} WUC{" "}
+
         <span style={{ color: `${diff > 0 ? "green" : "red"}` }}>
           {diff && <span>{arrow + diff?.toFixed(2)}</span>}
         </span>
