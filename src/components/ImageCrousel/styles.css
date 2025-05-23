@@ -56,7 +56,7 @@
 .dot--selected {
   background-color: white;
 }
-
+// 利用transform来实现居中 
 .dots {
   position: absolute;
   display: flex;

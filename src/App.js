@@ -6,6 +6,7 @@ import { TicTacToe } from "./components/TicTacToe/TicTacToe";
 import { TicTacToe2 } from "./components/TicTacToell/TicTacToe2";
 import { TransferList } from "./components/TransferList/TransferList";
 import { TodoList } from "./components/TodoList/TodoList";
+import { CryptoConverter } from "./components/CryptoConverter/CryptoConverter";
 import "./index.css";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       {/* <TicTacToe /> */}
       {/* <TicTacToe2 size={4}/> */}
       {/* <TransferList /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <CryptoConverter/>
     </div>
   );
 }
