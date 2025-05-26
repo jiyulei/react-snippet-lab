@@ -7,8 +7,9 @@ import { TicTacToe2 } from "./components/TicTacToell/TicTacToe2";
 import { TransferList } from "./components/TransferList/TransferList";
 import { TodoList } from "./components/TodoList/TodoList";
 import { CryptoConverter } from "./components/CryptoConverter/CryptoConverter";
-import { GridBox} from "./components/GridBox/GridBox";
+import { GridBox } from "./components/GridBox/GridBox";
 import { DiceRoller } from "./components/DiceRoller/DiceRoller";
+import { PixelArt } from "./components/PixelArt/PixelArt";
 import "./index.css";
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
       {/* <TodoList /> */}
       {/* <CryptoConverter/> */}
       {/* <GridBox /> */}
-      <DiceRoller />
+      {/* <DiceRoller /> */}
+      <PixelArt />
     </div>
   );
 }

@@ -1,0 +1,47 @@
+/* .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.canva {
+  display: grid;
+  grid-template-columns: repeat(15, 30px);
+  grid-template-rows: repeat(15, 30px);
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  background-color: yellow;
+}
+
+.colorsPanel {
+  display: grid;
+  grid-template-columns: repeat(11, 30px);
+}
+
+.colorsButton {
+  aspect-ratio: 1/ 1;
+  border: 1px solid black;
+}
+
+.drawControls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 30px;
+}
+.colorButton {
+  padding: 8px 12px;
+  margin: 4px;
+  border: 1px solid gray;
+  background-color: white;
+}
+
+.colorButton.selected {
+  border: 2px solid black;
+  background-color: lightgray;
+} */
