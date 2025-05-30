@@ -46,6 +46,7 @@ const result4 = nested.reduce((pre, cur) => pre.concat(cur));
 console.log("flatten", result4);
 
 // hasOwn可以用给array或者object ， 第一个参数为array或者object本身，第二个参数为index或者key
+// 这里目的是为了排除稀疏数组
 
 const MyReduce = function (callBackFn, initialValue) {
   const length = this.length;
