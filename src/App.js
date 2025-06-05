@@ -1,5 +1,5 @@
 import { ShoppingList } from "./components/ShoppingList/ShoppingList";
-import { ContactForm } from "./components/ContactForm.jsx/ContactForm";
+import { ContactForm } from "./components/ContactForm/ContactForm";
 import { TrafficLight } from "./components/TrafficLight/TrafficLight";
 import { CrouselContainer } from "./components/ImageCrousel/CrouselContainer";
 import { TicTacToe } from "./components/TicTacToe/TicTacToe";
@@ -10,6 +10,8 @@ import { CryptoConverter } from "./components/CryptoConverter/CryptoConverter";
 import { GridBox } from "./components/GridBox/GridBox";
 import { DiceRoller } from "./components/DiceRoller/DiceRoller";
 import { PixelArt } from "./components/PixelArt/PixelArt";
+import { Test } from "./components/TestComponent/TestComponent";
+import { StopWatch } from "./components/StopWatch/StopWatch";
 import "./index.css";
 
 function App() {
@@ -27,7 +29,9 @@ function App() {
       {/* <CryptoConverter/> */}
       {/* <GridBox /> */}
       {/* <DiceRoller /> */}
-      <PixelArt />
+      {/* <PixelArt /> */}
+      {/* <Test /> */}
+      <StopWatch />
     </div>
   );
 }

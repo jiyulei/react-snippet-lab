@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>getElementsByStyle Demo</title>
+  <style>
+    .blue {
+      color: blue;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <p class="blue">This is blue</p>
+    <span>
+      <p class="red">This is red</p>
+      <p class="blue">Another blue</p>
+    </span>
+  </div>
+
+  <script>
+    function getElementsByStyle(element, property, value) {
+      const result = [];
+
+      function dfs(node) {
+        for (const child of node.children) {
+          const style = getComputedStyle(child);
+          if (style[property] === value) {
+            result.push(child);
+          }
+          dfs(child); // continue to traverse children
+        }
+      }
+
+      dfs(element);
+      return result;
+    }
+
+    // Try this in console
+    const root = document.getElementById('root');
+    const found = getElementsByStyle(root, 'color', 'rgb(0, 0, 255)');
+    console.log(found); // should log the two blue <p> elements
+  </script>
+</body>
+</html>
