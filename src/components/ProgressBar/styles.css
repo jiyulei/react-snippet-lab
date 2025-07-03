@@ -1,0 +1,26 @@
+.outside {
+  width: 50%;
+  height: 50px;
+  background-color: gray;
+}
+
+.bars {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inside {
+    height: 50px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition-duration: 2000ms;
+    transition-timing-function: linear;
+    transition-property: transform;
+}
+
+.barfilled {
+    transform: scaleY(1);
+    background-color: green;
+}

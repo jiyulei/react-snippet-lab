@@ -12,7 +12,10 @@ import { DiceRoller } from "./components/DiceRoller/DiceRoller";
 import { PixelArt } from "./components/PixelArt/PixelArt";
 import { Test } from "./components/TestComponent/TestComponent";
 import { StopWatch } from "./components/StopWatch/StopWatch";
+import { TodoList2 } from "./components/TodoList/TodoList2";
+
 import "./index.css";
+import { ProgressBar } from "./components/ProgressBar/ProgressBar";
 
 function App() {
   return (
@@ -31,7 +34,9 @@ function App() {
       {/* <DiceRoller /> */}
       {/* <PixelArt /> */}
       {/* <Test /> */}
-      <StopWatch />
+      {/* <StopWatch /> */}
+      {/* <ProgressBar /> */}
+      <TodoList2 />
     </div>
   );
 }
